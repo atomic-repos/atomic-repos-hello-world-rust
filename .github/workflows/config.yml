@@ -23,11 +23,10 @@ jobs:
     name: Test
     strategy:
       matrix:
-        strategy:
-          os:
-          - ubuntu-latest
-          rust:
-          - stable
+        os:
+        - ubuntu-latest
+        rust:
+        - stable
     runs-on: ${{ matrix.os }}
     needs: [compile]
     steps:
