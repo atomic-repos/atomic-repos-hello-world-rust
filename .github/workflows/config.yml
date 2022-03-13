@@ -2,6 +2,10 @@ name: Rust CI
 
 on: [push]
 
+defaults:
+  run:
+    working-directory: static/hello-world-rust
+
 jobs:
   compile:
     name: Compile
@@ -17,12 +21,13 @@ jobs:
         run: cargo check
   test:
     name: Test
-    matrix:
-      strategy:
-        os:
-        - ubuntu-latest
-        rust:
-        - stable
+    strategy:
+      matrix:
+        strategy:
+          os:
+          - ubuntu-latest
+          rust:
+          - stable
     runs-on: ${{ matrix.os }}
     needs: [compile]
     steps:
