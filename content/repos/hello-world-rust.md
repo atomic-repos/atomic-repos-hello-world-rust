@@ -4,7 +4,7 @@ icon: rust
 icon_pack: fab
 summary: 'Atomic Repos Template'
 github_user: mstine
-github_repo: atomic-repos/atomic-repo-hello-world-rust
+github_repo: atomic-repos/atomic-repos-hello-world-rust
 author: Matt Stine
 date: 2022-03-07
 tags:
